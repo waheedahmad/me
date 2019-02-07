@@ -22,4 +22,4 @@ def api_message():
     elif request.headers['Content-Type'] == 'application/json':
         return "JSON Message: " + json.dumps(request.json)
     else:
-        return "415 Unsupported Media Type ;)"+request.headers['Content-Type']
+        return "Media Type:"+request.headers['Content-Type'] +">>DATA:"+ json.dumps(request.json)
